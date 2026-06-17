@@ -1,0 +1,39 @@
+{
+  "name": "@uikode/tide-canvas",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Decorative canvas effects — confetti, ambient glow, particles. Zero deps, theme-aware.",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsup src/index.ts --format esm,cjs --dts --minify",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint src/ --ext .ts",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^8.0.0",
+    "@typescript-eslint/parser": "^8.0.0",
+    "eslint": "^9.0.0",
+    "jsdom": "^29.1.1",
+    "tsup": "^8.0.0",
+    "typescript": "^5.4.0",
+    "vitest": "^3.0.0"
+  },
+  "keywords": ["canvas", "confetti", "effects", "particles", "animation"],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/uikode/tide-canvas.git"
+  }
+}
